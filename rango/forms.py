@@ -7,7 +7,6 @@ class CategoryForm(forms.ModelForm):
     likes = forms.IntegerField(widget=forms.HiddenInput(), initial=0)
     slug = forms.CharField(widget=forms.HiddenInput(), required=False)
 
-
     class Meta:
         model = Category
         fields = ('name',)
@@ -24,7 +23,8 @@ class PageForm(forms.ModelForm):
             url = 'http://' + url
             cleaned_data['url'] = url
             
-            return cleaned_data
+            return cleaned_data
+
 
     class Meta:
         model = Page
