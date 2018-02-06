@@ -1,22 +1,21 @@
-<!DOCTYPE html>
 
-{% load staticfiles %}
+	{% extends 'rango/base.html' %}
+	{% load staticfiles %}
 
-<html>
-	<head>
-		<title>Rango</title>
-	</head>
+	{% block title_block %}
+		{{ category.name }}
+	{% endblock %}
 
-	<body> 
+
+
+	{% block body_block %} 
 		<h1> This tutorial has been put together by Sam George </h1>
 
 		<div>
-			<a href="/rango/">Main page</a><br />
 
 			<img src="{% static 'images/about.jpg' %}" alt="About" />
 			<img src="{{ MEDIA_URL }}cat.jpg" alt="Cat" />
 
 		</div>
-	</body>
+	{% endblock %}
 
-</html>
